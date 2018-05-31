@@ -12,7 +12,31 @@
 <meta charset="UTF-8">
 <meta name="authoring-tool" content="Adobe_Animate_CC">
 <title>banner</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="baner.css">
 <!-- write your code here -->
+<style>
+  #animation_container {
+	position:absolute;
+	margin:auto;
+	left:0;right:0;
+	top:0;bottom:0;
+  }
+
+  @media only screen 
+and (min-width : 1224px) {
+	canvas {
+		width: 325px; !important
+		height: 287px;
+	}
+}@media only screen 
+and (min-width : 1224px) {
+	#animation_container {
+		width: 325px; !important
+		height: 287px;
+	}
+}
+</style>
 <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
 <script src="banner.js"></script>
 <script>
@@ -87,7 +111,7 @@ function handleComplete(evt,comp) {
 			stage.tickOnUpdate = true;		
 		}
 	}
-	makeResponsive(true,'both',true,1);	
+	makeResponsive(true,'width',false,1);	
 	AdobeAn.compositionLoaded(lib.properties.id);
 	fnStartAnimation();
 }
